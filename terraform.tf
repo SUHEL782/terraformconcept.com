@@ -8,6 +8,12 @@ terraform {
 }
 
 provider "aws" {
+
+    region = "us-east-1"
+
+
+#some changes for git merging    
+
   region = us-east-1
   
 }
@@ -21,3 +27,4 @@ backend "s3" {
   dynamodb_table = "terraform-state-lock"
   encrypt        = true
 }
+

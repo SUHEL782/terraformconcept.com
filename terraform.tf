@@ -8,7 +8,23 @@ terraform {
 }
 
 provider "aws" {
+
     region = "us-east-1"
 
 
 #some changes for git merging    
+
+  region = us-east-1
+  
+}
+#terraform store sttefile in s3 bucket
+# Create an S3 bucket to store Terraform state files
+
+backend "s3" {
+  bucket         = "my-unique-bucket-name"
+  key            = "terraform.tfstate"
+  region         = "us-east-1"
+  dynamodb_table = "terraform-state-lock"
+  encrypt        = true
+}
+

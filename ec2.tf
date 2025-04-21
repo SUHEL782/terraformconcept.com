@@ -7,3 +7,5 @@ resource "aws_instance" "my_terra_Instance" {
     Name = "My-terra_Ins-${count.index+1}"
   }
 }
+
+# some changes for merging purpose
